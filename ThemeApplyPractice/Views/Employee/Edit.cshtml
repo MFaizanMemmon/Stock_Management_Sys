@@ -1,0 +1,38 @@
+﻿@model ThemeApplyPractice.Models.Employee
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Edit Employee</h6>
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="EmployeeId" />
+                    <div class="row mb-3">
+                        <label asp-for="EmployeeName" class="control-label col-sm-3"></label>
+                        <div class="col-sm-9">
+                            <input asp-for="EmployeeName" class="form-control" />
+                            <span asp-validation-for="EmployeeName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </form>
+                <a asp-action="Display">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

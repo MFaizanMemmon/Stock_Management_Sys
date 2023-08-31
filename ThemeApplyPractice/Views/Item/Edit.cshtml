@@ -1,0 +1,35 @@
+﻿@model ThemeApplyPractice.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Edit Product</h6>
+                <form asp-action="Edit">
+                    <input type="hidden" asp-for="ProductId" />
+                    <div class="row mb-3">
+                        <label asp-for="ProductName" class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-9">
+                            <input asp-for="ProductName" class="form-control" />
+                            <span asp-validation-for="ProductName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="Status" class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-9">
+                            <input asp-for="Status" class="form-control" />
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </form>
+                <a asp-action="Display" asp-controller="Item">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>

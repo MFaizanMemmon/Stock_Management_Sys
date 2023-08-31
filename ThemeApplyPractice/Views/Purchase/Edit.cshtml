@@ -1,0 +1,64 @@
+﻿@model ThemeApplyPractice.Models.Purchase
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Edit Purchase</h6>
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="PurchaseId" />
+                    <div class="row mb-2">
+                        <label asp-for="PurDate" class="control-label col-3"></label>
+                        <div class="col-sm-9">
+                            <input type="date" asp-for="PurDate" class="form-control" />
+                            <span asp-validation-for="PurDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label asp-for="Vendor" class="control-label col-sm-3"></label>
+                        <div class="col-sm-9">
+                            <select asp-for="VendorId" asp-items="@(new SelectList(ViewBag.VendorList,"Value","Text"))" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label asp-for="ProductName" class="control-label col-sm-3"></label>
+                        <div class="col-sm-9">
+                            <select asp-for="ProductId" asp-items="@(new SelectList(ViewBag.ProductList,"Value","Text"))" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label asp-for="Qty" class="control-label col-sm-3"></label>
+                        <div class="col-sm-9">
+                            <input asp-for="Qty" class="form-control" />
+                            <span asp-validation-for="Qty" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label asp-for="Price" class="control-label col-3"></label>
+                        <div class="col-sm-9">
+                            <input asp-for="Price" class="form-control" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+                <div>
+                    <a asp-action="Display">Back to List</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

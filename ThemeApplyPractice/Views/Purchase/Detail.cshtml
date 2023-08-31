@@ -1,0 +1,79 @@
+﻿@model ThemeApplyPractice.Models.Purchase
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4">Purchase Detail</h6>
+
+                <div class="row mb-2">
+                    <div class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.PurDate)
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.PurDate)
+                    </div>
+                </div>
+                @* <div class="row mb-2">
+                <div class="col-sm-3">
+                @Html.DisplayNameFor(model => model.ProductName)
+                </div>
+                <div class="col-sm-9">
+                @Html.DisplayFor(model => model.ProductName)
+                </div>
+                </div>*@
+                <div class="row mb-2">
+                    <div class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.Qty)
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.Qty)
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.Price)
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.Price)
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-3">
+                        <@Html.DisplayNameFor(model => model.Vendor)
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.Vendor)
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.VendorId)
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.VendorId)
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.ProductId)
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DisplayFor(model => model.ProductId)
+                    </div>
+                </div>
+                <div>
+                    <a asp-action="Edit" asp-route-id="@Model.PurchaseId">Edit</a> |
+                    <a asp-action="Display">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

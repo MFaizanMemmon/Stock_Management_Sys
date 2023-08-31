@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ThemeApplyPractice.Models.Purchase>
+
+@{
+    ViewData["Title"] = "Display";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg-secondary rounded h-100 p-4">
+    <h6 class="mb-4">Purchase List</h6>
+    <p>
+        <a asp-action="Create" class="btn btn-primary rounded-pill m-2">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PurDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Qty)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                
+                <th>
+                    @Html.DisplayNameFor(model => model.Vendor)
+                </th>
+               
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PurDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Qty)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Vendor)
+                    </td>
+                   
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.PurchaseId">Edit</a> |
+                        <a asp-action="Detail" asp-route-id="@item.PurchaseId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.PurchaseId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+
+
+
+
