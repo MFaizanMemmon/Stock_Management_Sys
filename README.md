@@ -1,5 +1,5 @@
 # Stock Management System
-![PurchaseForm](https://github.com/MFaizanMemmon/ThemeApplyPractice/assets/118439682/10a7a673-f641-4f19-bd6c-982f23e629c9)
-![Print](https://github.com/MFaizanMemmon/ThemeApplyPractice/assets/118439682/8d9da1ac-1fad-4803-884f-92d411972ca1)
-![EmployeeForm](https://github.com/MFaizanMemmon/ThemeApplyPractice/assets/118439682/7b33726b-fe2a-44bf-8f7e-48ea1c4b8db5)
-![Dashboard](https://github.com/MFaizanMemmon/ThemeApplyPractice/assets/118439682/30327aee-2514-4a66-8087-f865143e943b)
+![PurchaseForm](https://github.com/MFaizanMemmon/Stock_Management_Sys/assets/118439682/74345b7b-48bb-4bdf-83a8-bb439228a651)
+![Print](https://github.com/MFaizanMemmon/Stock_Management_Sys/assets/118439682/65001282-37fa-46d1-a29f-8d6f107c8b13)
+![EmployeeForm](https://github.com/MFaizanMemmon/Stock_Management_Sys/assets/118439682/15507421-9a6d-4317-bed5-e5a5fa006e45)
+![Dashboard](https://github.com/MFaizanMemmon/Stock_Management_Sys/assets/118439682/1527bc38-2815-4118-b8df-548114397165)
